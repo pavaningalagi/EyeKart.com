@@ -8,7 +8,8 @@ const productsSchema = mongoose.Schema({
     size:{type: String, required: true},
     colors:{type: Array, required: true},
     photos:{type: Array, required: true},
-    tech_info:{type:Object}
+    tech_info:{type:Object},
+    empID:{type:String, required:true}
 });
 
 const productsModel = mongoose.model('product', productsSchema);
