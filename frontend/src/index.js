@@ -7,4 +7,10 @@ const nav = document.getElementById('nava');
       nav.innerHTML = navbar;
 const ft = document.getElementById('ft');
       ft.innerHTML =footer;
+
+
+
+
+
+      
       
