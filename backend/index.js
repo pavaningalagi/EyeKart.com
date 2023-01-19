@@ -5,7 +5,9 @@ require('dotenv').config();
 const PORT = process.env.port || 8070;
 const {connection} = require("./configs/db");
 const {usersRoute} = require("./routes/usersRoute");
+const {productsRoute} = require("./routes/productsRoute");
 const cors = require('cors');
+const {authenticate} = require('./middlewares/authenticate.middleware');
 
 app.use(cors({
     origin: "*"
@@ -16,6 +18,9 @@ res.send("welcome to EyeKart")
 });
 
 app.use('/users',usersRoute);
+
+
+app.use('/products',productsRoute);
 
 app.listen(PORT,async()=>{
     try {

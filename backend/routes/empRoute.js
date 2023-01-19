@@ -1,17 +1,17 @@
 const express = require('express');
-const {usersModel} = require('../models/usersModel');
-const usersRoute = express.Router();
+const {empsModel} = require('../models/empModel');
+const empRoute = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-const {authenticate} = require('../middlewares/authenticate.middleware');
+const {emp_auth} = require('../middlewares/emp_auth.middleware');
 const { query } = require('express');
 
-usersRoute.get("/",(req,res)=>{
-res.send("you are in users route");
+empRoute.get("/",(req,res)=>{
+res.send("you are in employee route");
 });
 
-usersRoute.post("/register",async(req,res)=>{
+empRoute.post("/register",async(req,res)=>{
     try {
         const {f_name,l_name,email,pass,mobile} = req.body;
         const saltRounds = 10;
@@ -19,35 +19,35 @@ usersRoute.post("/register",async(req,res)=>{
               bcrypt.hash(myPlaintextPassword, saltRounds, async(err, secured_pass)=> {
                 // Store hash in your password DB.
                 if(secured_pass){
-                    const data = new usersModel({f_name,l_name,email,pass:secured_pass,mobile});
-                        await data.save();
-                    res.send({"msg": "User Registerd successfully"});
+                    const data = new empsModel({f_name,l_name,email,pass:secured_pass,mobile});
+                          await data.save();
+                    res.send({"msg": "employee Registerd successfully"});
                 }else{
                     res.send(err.message);
-                    res.send({"msg": "error registering user"});
+                    res.send({"msg": "error registering employee"});
                 }
             });
     } catch (error) {
         res.send(error.message);
-        res.send({"msg": "error registering user"});
+        res.send({"msg": "error registering employee"});
     }
 });
 
-usersRoute.post("/login",async(req,res)=>{
+empRoute.post("/login",async(req,res)=>{
     try {
         const {email,pass} = req.body;
-        const user = await usersModel.findOne({email});
-        // console.log(user.pass);
-        // res.send(user.pass);
-        if(user){
+        const emp = await empsModel.findOne({email});
+        // console.log(emp.pass);
+        // res.send(emp.pass);
+        if(emp){
             const key = process.env.key;
             const myPlaintextPassword = pass;
-            const secured_pass = user.pass;
-            const id = user._id;
+            const secured_pass = emp.pass;
+            const id = emp._id;
             // console.log(id);
             bcrypt.compare(myPlaintextPassword, secured_pass, (err, result)=>{
                 if(result){
-                    const token = jwt.sign({ userID:id }, key ,{ expiresIn: '24h' });
+                    const token = jwt.sign({ empID:id }, key ,{ expiresIn: '24h' });
                     res.send({"msg":"login successfull - Welcome to EyeKart.com", "token":token});
                 }else{
                     console.log(err);
@@ -61,36 +61,36 @@ usersRoute.post("/login",async(req,res)=>{
     }
 });
 
-usersRoute.use(authenticate);
+empRoute.use(emp_auth);
 
-usersRoute.patch("/update", async(req,res)=>{
+empRoute.patch("/update", async(req,res)=>{
     try {
-        const {userID,f_name,l_name,email,pass,mobile} = req.body;
+        const {empID,f_name,l_name,email,pass,mobile} = req.body;
         const new_data = req.body;
-        const user = await usersModel.findById({_id:userID});
-        if(user){
+        const emp = await empsModel.findById({_id:empID});
+        if(emp){
             // console.log(new_data);
             // res.send(new_data); 
             if(pass){
                 const saltRounds = 10;
-                const myPlaintextPassword = user.pass;
+                const myPlaintextPassword = emp.pass;
               bcrypt.hash(myPlaintextPassword, saltRounds, async(err, secured_pass)=> {
                 // Store hash in your password DB.
                 if(secured_pass){
-                    const data = await usersModel.findByIdAndUpdate(userID);
+                    const data = await empsModel.findByIdAndUpdate(empID);
                         data.pass = secured_pass;
                         await data.save();
-                    res.send({"msg": "User data updated successfully"});
+                    res.send({"msg": "emp data updated successfully"});
                 }else{
                     res.send(err.message);
-                    res.send({"msg": "error updating user data"});
+                    res.send({"msg": "error updating emp data"});
                 }
             });
 
             }else if(new_data){
-                const data = await usersModel.findByIdAndUpdate(userID, new_data);
+                const data = await empsModel.findByIdAndUpdate(empID, new_data);
                         await data.save();
-                    res.send({"msg": "User data updated successfully"});
+                    res.send({"msg": "emp data updated successfully"});
                 }else{
                     res.send(err);
                     res.send({"msg": "Invalid entry"});
@@ -104,11 +104,11 @@ usersRoute.patch("/update", async(req,res)=>{
 
 });
 
-usersRoute.delete("/delete", async(req,res)=>{
+empRoute.delete("/delete", async(req,res)=>{
     try {
-        const {userID} = req.body;
-        const data = await usersModel.findByIdAndDelete({"_id":userID});
-       res.send({"msg":"User deleted successfully"})
+        const {empID} = req.body;
+        const data = await empsModel.findByIdAndDelete({"_id":empID});
+       res.send({"msg":"emp deleted successfully"})
         
     } catch (error) {
         res.send(error);
@@ -118,7 +118,7 @@ usersRoute.delete("/delete", async(req,res)=>{
 });
 
 module.exports = {
-    usersRoute
+    empsRoute
 }
 
 
