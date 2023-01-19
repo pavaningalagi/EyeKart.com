@@ -1,0 +1,39 @@
+
+#footer{
+    background-color: white;
+    line-height: 25px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+#footer h1{
+    margin-bottom: 20px;
+}
+#footer p{
+    margin-bottom: 10px;
+}
+
+#serv{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#social{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+#social1{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+#social2{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+#social2 i{
+    font-size: 25px;
+}
