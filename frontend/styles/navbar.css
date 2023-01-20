@@ -4,6 +4,8 @@
     font-family: Verdana (sans-serif);
     color: #000042;
     /* text-align: center; */
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 #nava{
     position: fixed;
@@ -77,7 +79,7 @@
 #nav_opt{
     display: flex;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 0px 25px;
     background-color: #fbf9f7;
     align-items: center;
 }
@@ -92,7 +94,9 @@
     font-weight: 550;
     text-decoration: none
 } */
-
+#nav_opt_lhs{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 #nav_opt_rhs{
     border: 0px solid black;
     
@@ -128,7 +132,7 @@ a {
 }
 
 .dropdown .menu a:hover{
-    color:aqua;
+    color:#888;
 }
 
 .dropdown > div {
@@ -148,24 +152,52 @@ a {
     overflow-y: scroll ;
     transition: 0.4s ease-in-out;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 2em;
 }
+.menu img {
+    width: 20%;
+}
 
-.menu > li :first-child{
+.menu >li> div{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0px 10px;
+    margin: 05px 0px;
+}
+.menu .main-menu:first-child{
+    margin-top: 50px;
+}
+.menu >li> div:hover{
+    background-color: #fbf9f7;
+}
+.menu > li{
     font-size:1.1em;
     font-weight: bold;
     margin: 0;
 }
+.main-menu{
+    margin-top:40px ;
 
+}
 .sub-dropdown > div span:first-child {
     font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.sub-menu>li a,p {
+font-size: 14px;
 }
 
 .dropdown > div {
-    border-bottom: 3px #fff solid;
+    /* border-bottom: 3px #fff solid; */
     transition: 0.3s;
+    font-size: 16px;
+    color: #000042;
+    font-weight: 550;
+    text-decoration: none
 }
 
 .dropdown:hover div {
@@ -209,11 +241,94 @@ a {
 }
 
 
+#kids{
+    border: 0px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: rgb(238, 238, 238); */
+    width: 1000px;
+    margin: auto;
+    align-items: center;
+    padding: 50px 100px;
+    margin: 25px 120px;
+}
+#kids:hover{
+    background-color: white;
+}
+.kidsglasses{
+    border: 0px solid black;
+    background-color: rgb(246, 251, 250);
+    width: 220px;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
 
+}
+.kidsglasses img{
+    width: 120px;
+    padding: 0px 25px;
+}
+.kidsglasses p{
+    color: gray;
+}
+#test{
+    margin-top: -25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.hometest {
+    border: 0px solid gray;
+}
+.hometest img{
+    width: 120%;
+}
+#hometests{
+margin-left: 180px;
+}
+#hometests button{
+    margin-top: 25px;
+    border-radius: 100px;
+    padding: 10px 20px;
+    background-color: white;
+    border-color:#000042; ;
+}
+#hometests button:hover{
+    background-color: #000042;
+    color: white;
+    cursor: pointer;
+}
+#storediv{
+    border: 0px solid black;
+    justify-content: space-around;
+    display: flex;
+    margin: 50px 50px;
+    background-color: white;
+}
+#store{
+    border: 0px solid red;
+    background-color: white;
+}
 
+#hometestss{
+    padding: 20px 50px;
+    text-align: center;
+    background-color: white;
+}
+#hometestss button{
+    margin-top: 25px;
 
-
-
-
-
-
+    border-radius: 100px;
+    padding: 10px 20px;
+    background-color: white;
+    border-color:#000042; ;
+}
+#hometestss button:hover{
+    background-color: #000042;
+    color: white;
+    cursor: pointer;
+}
