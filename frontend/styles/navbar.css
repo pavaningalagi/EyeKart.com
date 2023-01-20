@@ -5,6 +5,12 @@
     color: #000042;
     /* text-align: center; */
 }
+#nava{
+    position: fixed;
+    z-index: 9999;
+    background-color: white;
+    width: 100%;
+}
 #country{
     border: 0px solid rebeccapurple;
     display: flex;
@@ -18,6 +24,13 @@
     border: 0px solid red;
     display: flex;
     gap: 5px;
+}
+
+#country_lhs a{
+    text-decoration: none;
+}
+#country_rhs a{
+    text-decoration: none;
 }
 
 #phone{
@@ -53,10 +66,12 @@
     justify-content: space-evenly;
 
 }
-#rhs_nav button{
-border: 0px solid black;background: none;
-font-size: 14px;
-margin: 5px;
+#rhs_nav a{
+    border: 0px solid black;
+    background: none;
+    font-size: 14px;
+    margin: 5px;
+    text-decoration: none;
 }
 
 #nav_opt{
@@ -66,16 +81,17 @@ margin: 5px;
     background-color: #fbf9f7;
     align-items: center;
 }
-#nav_opt_lhs{
+/* #nav_opt_lhs{
     border: 0px solid red;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
-#nav_opt_lhs p{
+#nav_opt_lhs li{
     font-size: 16px;
     color: #000042;
     font-weight: 550;
-}
+    text-decoration: none
+} */
 
 #nav_opt_rhs{
     border: 0px solid black;
@@ -85,3 +101,119 @@ margin: 5px;
     width: 75px;
     border-radius: 5px;
 }
+
+.nav-links li a{
+    text-decoration: none;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links{
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dropdown > div,
+.sub-dopdown > div {
+    cursor: pointer;
+}
+
+.dropdown .menu a:hover{
+    color:aqua;
+}
+
+.dropdown > div {
+    padding: 1.5em 1em;
+}
+
+.mega-menu{
+    display: flex;
+}
+.menu {
+    background: #fff;
+    position: absolute;
+    top: 160px;
+    left: 0;
+    width: 100%;
+    padding: 0 2em;
+    overflow-y: scroll ;
+    transition: 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.menu > li :first-child{
+    font-size:1.1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.sub-dropdown > div span:first-child {
+    font-weight: bold;
+}
+
+.dropdown > div {
+    border-bottom: 3px #fff solid;
+    transition: 0.3s;
+}
+
+.dropdown:hover div {
+    border-color:#000;
+}
+
+.dropdown li {
+    margin-bottom: 1em;
+}
+
+.dropdown > div span :last-child,
+.sub-dopdown > div {
+    display: none;
+}
+
+.menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.menu::-webkit-scrollbar-track{
+    background: #f1f1f1;
+
+}
+
+.menu::-webkit-scrollbar-thumb{
+    background:#888;
+}
+
+.menu::-webkit-scrollba-thumb:hover {
+    background: #555;
+}
+
+.menu{
+    height: 0;
+
+}
+
+.dropdown:hover .menu {
+    height: 50vh;
+    padding: 2em;
+}
+
+
+
+
+
+
+
+
+
+

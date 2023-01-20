@@ -1,4 +1,4 @@
-const navbar = ()=>{
+const navbar = ()=>
     `<div id="country">
     <div id="country_lhs">
         <p>Do More, Be More  |</p>
@@ -12,7 +12,7 @@ const navbar = ()=>{
         <p>Aqualens  |</p>
         <p>Cobrowsing  |</p>
         <p>Engineering Blog  |</p>
-        <p>Lenskart Franchise</p>
+        <p>EyeKart Franchise</p>
     </div>
     <div id="country_rhs">
         <p>Contact Us</p>
@@ -49,5 +49,6 @@ const navbar = ()=>{
         <img src="https://static.lenskart.com/media/desktop/img/Feb22/18-Feb/goldlogo.jpg" alt="">
     </div>
 </div> `
-};
+
+
 export {navbar};
