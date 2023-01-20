@@ -16,7 +16,6 @@ document.querySelector('.popup .close-btn').addEventListener("click", () =>{
       document.querySelector(".popup").classList.remove('active');
 });
 
-
 const create_acc = document.getElementById('create_acc');
       create_acc.onclick = () =>{
             document.querySelector(".popup").classList.remove('active');
