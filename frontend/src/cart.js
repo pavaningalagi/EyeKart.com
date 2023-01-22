@@ -1,4 +1,4 @@
-const url = `http://localhost:8080`;
+const url = `https://gray-hilarious-hedgehog.cyclic.app`;
 
 const getdata = async()=> {
 try {

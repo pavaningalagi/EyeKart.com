@@ -7,7 +7,7 @@ const nav = document.getElementById('nava');
       nav.innerHTML = navbar();
 const ft = document.getElementById('ft');
       ft.innerHTML =footer();
-const url = `http://localhost:8080`;
+const url = `https://gray-hilarious-hedgehog.cyclic.app`;
       
 let loginbtn = document.getElementById('loginbtn');
       loginbtn.onclick=() =>{
