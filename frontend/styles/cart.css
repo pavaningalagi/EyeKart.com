@@ -1,0 +1,126 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana (sans-serif);
+    color: #000042;
+    /* text-align: center; */
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: #fbf9f7;
+}
+#cart_lhs{
+    
+}
+#cart_lhs p:first-child{
+    font-size: 20px;
+    background-color: #fbf9f7;
+
+}
+#cart_rhs{
+    width: 50%;
+    
+    background-color: #fbf9f7;
+}
+#nav{
+    height: 60px;
+    display: flex;
+    justify-content:space-between;
+    /* border: 2px solid red; */
+    padding: 10px 200px;
+    text-align: center;
+    background-color: white;
+}
+
+#navrhs{
+     display: flex;
+    /* width: 100%; */
+    /* border: 2px solid black; */
+    gap: 10px;
+    align-items: center;
+    width: 200px;
+    background-color: white;
+}
+#navrhs img{
+    width: 10%;
+    background-color: white;
+}
+#navrhs p{
+    background-color: white;
+
+}
+
+#maincartdiv{
+    background-color: #fbf9f7;
+    /* background-color: white; */
+    padding-top: 60px;
+    /* border: 2px solid black; */
+    display: flex;
+    margin: auto;
+    width: 70%;
+    justify-content: space-between;
+    /* background-color: white; */
+}
+
+
+
+#maindivs{
+    /* border: 2px solid blue; */
+    display: flex;
+    margin: 20px 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border-radius: 30px;
+}
+
+#cpricediv{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+#cpricediv p:first-child{
+    background-color: white;
+}
+#cpricediv p:last-child {
+font-size: 20px;
+background-color: white;
+
+}
+#cimgdiv {
+    display: flex;
+    /* border: 2px solid red; */
+    /* margin: auto; */
+    /* width: 100px; */
+    width:30% ;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: white;
+}
+#cimgdiv img{
+    width: 100%;
+    background-color: white;
+}
+#cdatadiv{
+    width: 70%;
+    /* border: 2px solid brown; */
+    display: grid;
+    padding: 20px 20px;
+    /* line-height: 30px */
+    /* justify-content: space-between; */
+    background-color: white;
+    border-radius: 30px;
+    
+}
+#cdatadiv p:first-child{
+    background-color: white;
+    /* background-color: #fbf9f7; */
+}
+#deleteit{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    
+}
+
+#rhsdiv{
+    border: 2px solid red;
+}

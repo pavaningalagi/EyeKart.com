@@ -1,40 +1,41 @@
 const express = require('express');
 const {productsModel} = require("../models/productsModel");
 const productsRoute = express.Router();
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 
 
-productsRoute.use('/',authenticate);
+
 productsRoute.get('/', async(req,res)=>{
     const query = req.query;
     try {
         const products = await productsModel.find(query);
         res.send(products);
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.sendStatus(404).send('not authorized');
     }
 });
 
-productsRoute.get('/add', async(req,res)=>{
+productsRoute.post('/add', async(req,res)=>{
     const product = req.body;
     try {
         const data = new productsModel(product);
             await data.save();
+            res.send({"msg":"Product added successfully"});
     }catch (error) {
-        console.log(error);
-        res.sendStatus(404).send('not authorized');
+        // console.log(error);
+        res.send(error);
     }
 
 });
 
-productsRoute.get('/update', (req,res)=>{
+// productsRoute.get('/update', (req,res)=>{
 
-});
+// });
 
-productsRoute.get('/remove', (req,res)=>{
+// productsRoute.get('/remove', (req,res)=>{
 
-});
+// });
 
 
 

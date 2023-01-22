@@ -4,7 +4,7 @@ const usersRoute = express.Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-const {authenticate} = require('../middlewares/authenticate.middleware');
+// const {authenticate} = require('../middlewares/authenticate.middleware');
 const { query } = require('express');
 
 usersRoute.get("/",(req,res)=>{
@@ -61,7 +61,7 @@ usersRoute.post("/login",async(req,res)=>{
     }
 });
 
-usersRoute.use(authenticate);
+// usersRoute.use(authenticate);
 
 usersRoute.patch("/update", async(req,res)=>{
     try {

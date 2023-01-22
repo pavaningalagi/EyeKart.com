@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const productsSchema = mongoose.Schema({
+const cartSchema = mongoose.Schema({
     title:{type: String, required: true},
     price:{type: Number, required: true},
     strikePrice:{type: Number},
@@ -8,11 +8,12 @@ const productsSchema = mongoose.Schema({
     sub_category:{type: String, required: true},
     size:{type: String, required: true},
     colors:{type: Array, required: true},
-    photos:{type: Array, required: true}
+    photos:{type: Array, required: true},
+    userID:{type: String, required: true}
 });
 
-const productsModel = mongoose.model('product', productsSchema);
+const cartModel = mongoose.model('cart', cartSchema);
 
 module.exports = {
-    productsModel
+    cartModel
 }

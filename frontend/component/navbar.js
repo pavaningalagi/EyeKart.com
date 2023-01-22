@@ -45,7 +45,7 @@ const navbar = ()=>
                         <li>
                             <div class="main-menu">
                                 <img src="https://static.lenskart.com/media/desktop/img/men_pic.png" alt="">
-                                <a href="#">Men</a>
+                                <a href="./productsPage.html">Men</a>
                                 <i class="fa-solid fa-chevron-right"></i>
                             </div>
                             <div class="main-menu">
