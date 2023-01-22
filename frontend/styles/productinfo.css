@@ -1,0 +1,160 @@
+#prodtinfodiv{
+  padding-top: 180px;
+  display: flex;
+  /* width: 100%; */
+  /* border: 2px solid blue; */
+  margin-bottom: 20px;
+}
+
+#productinfo_lhs{
+  /* border: 2px solid black; */
+  padding: 10px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  /* text-align: center; */
+  row-gap: 10px;
+  width: 100%;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; */
+}
+
+#productinfo_lhs img{
+width:90%;
+padding: 0px 20px;
+}
+
+.subproductdiv{
+  margin-top: 10px;
+/* border: 2px solid red; */
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+line-height: 40px;
+padding: 10px 30px;
+}
+.subproductdiv p{
+  font-size: 16px;
+}
+
+.subproductdiv:hover{
+  zoom: 105%;
+  cursor: pointer;
+}
+
+#productinfo_rhs{
+  width: 50%;
+  padding: 10px 30px;
+}
+#cat{
+  font-family: futurastd-book, "helvetica neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 15px;
+  font-size: 16px;
+  color: #a6aeb8;
+}
+#titlle{
+  /* padding: 10px 0px; */
+  font-size: 20px;
+  font-family: futurastd-book, "helvetica neue", Helvetica, Arial, sans-serif;
+}
+#sizee{
+  color: #ababab;
+  font-size: 16px;
+  padding:5px 0px;
+  font-family:futurastd-book, "helvetica neue", Helvetica, Arial, sans-serif;
+}
+#pricee{
+  color: #329c92;
+  font-size: 22px;
+  padding:5px 0px;
+}
+#pricee i{
+  color: #329c92;
+  font-size: 18px;
+}
+#collors i{
+  border-radius: 50%;
+  font-size: 30px;
+  /* border: 0px soild red; */
+}
+
+#collors i:first-child{
+  background-color: #ee7600;
+  cursor: pointer;
+
+}
+#collors i:nth-child(2){
+  background-color: #012169;
+  cursor: pointer;
+
+}
+#collors i::nth-child(3){
+  background-color: #7d55c7;
+  cursor: pointer;
+}
+#buydiv{
+  display:grid;
+  row-gap: 25px;
+  margin: 30px 0px;
+}
+#buynow{
+  color: white;
+  background-color: #00bac6;
+  border-radius: 5px;
+  padding: 10px 0px;
+  border: 0px solid black;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#tryon{
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 0px;
+  border: 1px solid black;
+  cursor: pointer;
+  
+}
+.sss{
+  font-weight:bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 12px;
+  cursor:pointer;
+}
+
+#ratingg i{
+  color: gold;
+/* border-radius: 1000px; */
+}
+#reviveww p{
+  padding: 10px 6px;
+}
+#reviveww p:first-child{
+  /* color: gold; */
+  font-weight:bold;
+}
+
+#revbtn{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 10px;
+}
+
+#revbtn button:first-child{
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 50px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#revbtn button:last-child{
+  color: white;
+  background-color: #00bac6;
+  border-radius: 5px;
+  padding: 10px 50px;
+  border: 0px solid black;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
