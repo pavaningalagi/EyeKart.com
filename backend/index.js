@@ -6,8 +6,9 @@ const PORT = process.env.port || 8070;
 const {connection} = require("./configs/db");
 const {usersRoute} = require("./routes/usersRoute");
 const {productsRoute} = require("./routes/productsRoute");
+const {cartRoute} = require("./routes/cartRoute");
 const cors = require('cors');
-const {authenticate} = require('./middlewares/authenticate.middleware');
+
 
 app.use(cors({
     origin: "*"
@@ -19,6 +20,7 @@ res.send("welcome to EyeKart")
 
 app.use('/users',usersRoute);
 
+app.use('/cart',cartRoute);
 
 app.use('/products',productsRoute);
 
