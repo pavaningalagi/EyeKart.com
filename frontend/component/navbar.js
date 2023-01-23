@@ -28,7 +28,7 @@ const navbar = ()=>
     </div>
     <div id="rhs_nav">
         <a href="#">Track Order</a>
-        <a id="loginbtn" href="#">Sign In & Sign Up</a>
+        <a id="loginbtn" href="#"><span id="logginbtn">Sign In & Sign Up</span></a>
         <a href="#"><i class="fa-regular fa-heart"></i></i> Wishlist</a>
         <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
     </div>

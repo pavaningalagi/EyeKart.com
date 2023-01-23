@@ -7,9 +7,10 @@ const nav = document.getElementById('nava');
       nav.innerHTML = navbar();
 const ft = document.getElementById('ft');
       ft.innerHTML =footer();
-const url = `https://gray-hilarious-hedgehog.cyclic.app`;
+const url = `https://gray-hilarious-hedgehog.cyclic.app/`;
       
 let loginbtn = document.getElementById('loginbtn');
+      
       loginbtn.onclick=() =>{
             document.querySelector(".popup").classList.add('active');
       };
@@ -74,6 +75,7 @@ login.onclick = async(e)=> {
         pass:document.getElementById('password').value,
     }
 // console.log(user_data);
+
 try {
     let res = await fetch (`${url}/users/login`,{
         method: "POST",
@@ -86,6 +88,17 @@ try {
     console.log(res);
 //     console.log(token);
 document.querySelector(".popup").classList.remove('active');
+
+let usernames=[];
+let nam=user_data.email.length-11;
+for(let i=0;i<=nam;i++){
+usernames.push(user_data.email[i]);
+}
+// console.log(usernames);
+localStorage.setItem("username", usernames.join(""));
+
+let logginbtn = document.getElementById('logginbtn');
+      logginbtn.innerText = localStorage.getItem("username");
 } catch (error) {
     console.log(error);
 }
