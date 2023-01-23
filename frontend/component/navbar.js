@@ -674,7 +674,7 @@ const navbar = ()=>
                 </li>
                 <li class="dropdown">
                     <div>
-                        <span>HOME EYE-TEST</span>
+                        <span>STORE LOCATOR</span>
                     </div>
                     <ul class="menu">
                         <li><div id="storediv">
