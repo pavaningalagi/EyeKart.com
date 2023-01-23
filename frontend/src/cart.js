@@ -66,13 +66,13 @@ const append = (data) => {
     document.getElementById("totalprice").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ total_price;
     if(data.length>1){
     let diccount = total_price/2
-    document.getElementById("gold").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor();
+    document.getElementById("gold").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor(diccount);
     document.getElementById("tfdic").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor(total_price-diccount);
     document.getElementById("tax").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor((total_price-diccount)*0.18);
     document.getElementById("payable").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor(((total_price-diccount)*0.18)+total_price-diccount);
 }else{
     
-    document.getElementById("gold").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor(0);
+    document.getElementById("gold").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ 0;
     document.getElementById("tfdic").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor(total_price);
     document.getElementById("tax").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor((total_price)*0.18);
     document.getElementById("payable").innerHTML =`<i class="fa-solid fa-indian-rupee-sign"></i>`+ Math.floor(((total_price)*0.18)+total_price);
