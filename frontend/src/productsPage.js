@@ -31,7 +31,7 @@ document.querySelector('.popup .close-btn').addEventListener("click", () =>{
 document.querySelector(".popup").classList.remove('active');
 });
 
-const url = `https://gray-hilarious-hedgehog.cyclic.app`;
+const url = `https://gray-hilarious-hedgehog.cyclic.app/`;
 
 const getdata = async()=> {
       // e.preventDefault();
@@ -84,7 +84,8 @@ const append = (data) => {
   
 };
 
-
+let logginbtn = document.getElementById('logginbtn');
+      logginbtn.innerText = localStorage.getItem("username");
 
 
 

@@ -8,10 +8,16 @@
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         background-color: #fbf9f7;
 }
-#cart_lhs{
-    
+
+#billlhs i{
+    font-size: 12px;
 }
+#detailsdiv i{
+    font-size: 16px;
+}
+
 #cart_lhs p:first-child{
+    margin-left:20px ;
     font-size: 20px;
     background-color: #fbf9f7;
 
@@ -20,6 +26,23 @@
     width: 50%;
     
     background-color: #fbf9f7;
+}
+#logo{
+    width:40%;
+    background-color: white;
+    /* padding: 20px 20px;
+    height: 70%; */
+}
+#nav a:first-child{
+    /* border: 2px solid black ; */
+    background-color: white;
+    margin-left: -120px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* padding: -20px -20px;
+    width: 150px; */
+    
 }
 #nav{
     height: 60px;
@@ -65,12 +88,15 @@
 
 #maindivs{
     /* border: 2px solid blue; */
+    padding: 10px 10px;
     display: flex;
     margin: 20px 20px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
     border-radius: 30px;
+    /* font-size: 12px; */
 }
+
 
 #cpricediv{
     display: flex;
@@ -123,4 +149,60 @@ background-color: white;
 
 #rhsdiv{
     border: 2px solid red;
+}
+
+#cart_rhs>p:first-child{
+    font-size: 20px;
+    text-align: start;
+    margin-left: 20px;
+}
+#cartpricediv{
+    /* background-color: white; */
+    margin: auto;
+    align-items: center;
+    /* text-align: center; */
+}
+.csrtrhs{
+    text-align: start;
+    background-color: white;
+    /* display: flex; */
+    margin: 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    border-radius: 30px;
+    padding: 20px 20px;
+    justify-content: space-between;
+}
+.csrtrhs p{
+    background-color: white;
+}
+#bildiv{
+    display: flex;
+    line-height: 30px;
+}
+#cart_rhs{
+    /* border: 2px solid red; */
+
+    text-align: center;
+}
+
+#cartchekoutbtn{
+    color: white;
+    background-color: #11daac;
+    border-radius: 30px;
+    padding: 10px 0px;
+    border: 0px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0px;
+    width: 90%;
+}
+#deleteit{
+    color: white;
+    background-color: #dedad7;
+    border-radius: 30px;
+    border: 0px solid black;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0px;
+    width: 30%;
 }

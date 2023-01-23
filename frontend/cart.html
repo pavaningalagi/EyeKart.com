@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="nav">
-        <img src="./images/EyeKart_logo.png" alt="">
+        <a href="./index.html"><img id="logo" src="./images/EyeKart_logo.png" alt=""></a>
         <div id="navrhs">
             <img src="https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/Shield.svg" alt="">
             <p>100% safe and secure</p>
@@ -27,10 +27,30 @@
         </div>
         <div id="cart_rhs">
             <p>Bill Details</p>
-            <div id="cartpricediv"></div>
-            <div>
-                <p>The Eye-conic Sale</p>
-                <p>Extra 40% Off. Coupon:EYECON</p>
+            <div id="cartpricediv">
+                <div class="csrtrhs" id="bildiv">
+                    <div  id="billlhs">
+                        <p>Total Price</p>
+                        <p id="goldlhs">Gold Membership Discount</p>
+                        <p>Total After Discount</p>
+                        <hr>
+                        <p>Tax</p>
+                        <p>Total payable</p>
+                    </div>
+                    <div id="billlhs">
+                        <p id="totalprice"></p>
+                        <p class="goldlhs" id="gold"></p>
+                        <p id="tfdic"></p>
+                        <hr>
+                        <p id="tax"></p>
+                        <p id="payable"></p>
+                    </div>
+                </div>
+                <div class="csrtrhs" id="bogo">
+                    <p>Woohoo!</p>
+                    <p>Buy 1 Get 1 Free Applied!</p>
+                    <p>You are saving 50% on this order</p>
+                </div>
             </div>
             <button id="cartchekoutbtn">Proceed To Checkout</button>
         </div>
