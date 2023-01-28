@@ -1,4 +1,4 @@
-const url = `https://gray-hilarious-hedgehog.cyclic.app/`;
+const url = ``;
 
 const getdata = async()=> {
 try {
