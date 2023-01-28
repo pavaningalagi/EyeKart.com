@@ -31,7 +31,7 @@ document.querySelector('.popup .close-btn').addEventListener("click", () =>{
 document.querySelector(".popup").classList.remove('active');
 });
 
-const url = `https://gray-hilarious-hedgehog.cyclic.app/`;
+const url = ``;
   
 const append = () => {
       const product = JSON.parse(localStorage.getItem("product")); 
