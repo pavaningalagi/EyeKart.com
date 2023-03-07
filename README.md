@@ -3,7 +3,7 @@ Original Website : Lenskart.com
 
 Project Name : EyeKart.com
 
-EyeKart is a clone website project of Lenskart.com
+EyeKart is a clone of Lenskart.com
 
 Tech Stack used: HTML, CSS, JavaScript and Nodejs.
 database: MongoDB
