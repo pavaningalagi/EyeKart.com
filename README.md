@@ -7,3 +7,4 @@ EyeKart is a clone of Lenskart.com
 
 Tech Stack used: HTML, CSS, JavaScript and Nodejs.
 database: MongoDB
+https://gleaming-figolla-d66426.netlify.app/
